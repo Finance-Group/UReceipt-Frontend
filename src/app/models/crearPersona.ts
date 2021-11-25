@@ -1,4 +1,5 @@
 export interface CrearPersona {
+  id: number;
   nombre: string
   ruc: number
   correo: string

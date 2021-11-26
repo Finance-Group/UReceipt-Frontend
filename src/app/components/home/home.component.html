@@ -1,6 +1,8 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- Header-->
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="navbar-brand h1" href="#">
+  <a class="navbar-brand fs-1 align-middle fw-bold texto" href="#">
     <img src="../../../assets/logo.png" height="60" alt="">
     UReceipt
   </a>
@@ -9,15 +11,15 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto">
+    <ul class="navbar-nav ms-auto mx-5">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#1">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Introducción</a>
+        <a class="nav-link" href="#2">Introducción</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Nosotros</a>
+        <a class="nav-link" href="#3">Nosotros</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Iniciar Sesión</a>
@@ -30,14 +32,14 @@
 </nav>
 
 <!-- Presentacion-->
-<section class="container-fluid">
+<section id="1" class="container-fluid">
   <div class="row">
-    <div class="col bg-primary container p-5 pb-0">
-      <div class="">
+    <div class="col-5 bg-primary container p-5 pb-0">
+      <div class="mb-5">
         <h1 class="font-weight-bold text-white">Finanzas e</h1>
         <h1 class="font-weight-bold text-danger">ingeniería</h1>
       </div>
-      <div class="text-white font-weight-bold">
+      <div class="text-white fw-bold">
         <ul>
           <li>Nicoll Yamira Malca Rojas</li>
           <li>Julissa Karol Ponte Isminio</li>
@@ -62,15 +64,15 @@
 <!-- Inicio de sesión-->
 <section class="container-fluid">
   <div class="row">
-    <div class="col bg-secondary container p-5">
+    <div class="col-5 bg-secondary container p-5">
       <h1 class="font-weight-bold">INICIO DE</h1>
       <h1>SESIÓN</h1>
     </div>
 
     <div class="col bg-white">
-      <div class="card text-center mx-auto m-5" style="width: 60%">
+      <div class="card text-center mx-auto m-5" style="width: 50%">
         <div>
-          <img src="../../../assets/logo.png"  height="124" alt="">
+          <img src="../../../assets/logo.png" class="sombra-2" height="124" alt="">
         </div>
         <div class="card-body ">
           <form>
@@ -95,10 +97,10 @@
 </section>
 
 <!--    Introducción-->
-<section class="container-fluid bg-primary text-center text-white p-4">
-  <div class="container">
-    <h1 class="font-weight-bold">Introducción</h1>
-    <p class="font-weight-bold p-4">
+<section id="2" class="container-fluid bg-primary text-center text-white p-5">
+  <div class="container fw-bold">
+    <h1 class="">Introducción</h1>
+    <p class="p-5">
       Debido a la situación crítica a causa del COVID-19, distintas actividades se han visto obligadas a cambiar a medios digitales para evitar el posible contacto entre dos personas. Los recibos por honorarios no son la excepción e instituciones gubernamentales como la SUNAT han hecho cambios en su sistema y página web para poder realizar emisiones de recibos por honorarios electrónicos.
       <br><br>
       En el presente trabajo utilizaremos los conceptos aprendidos durante el curso de Finanzas e Ingeniería Económica para dar una solución eficiente que detalle la información y operaciones necesarias en un recibo por honorarios. Por ello, nuestro equipo optó por desarrollar una aplicación web que facilite lo antes mencionado. Esperamos cumplir con nuestro propósito de manera sobresaliente y orientar a las personas que decidan utilizar nuestra aplicación web.
@@ -107,66 +109,66 @@
 </section>
 
 <!--    Nosotros-->
-<section class="container-fluid text-center p-4 bg-secondary">
+<section id="3" class="container-fluid p-5 bg-secondary">
   <div class="container">
-    <h1 class="font-weight-bold text-primary">Nosotros</h1>
+    <h1 class="font-weight-bold text-primary text-center">Nosotros</h1>
 
     <div class="row justify-content-around p-5">
-      <div class="card text-white" style="width: 196px">
-        <img src="../../../assets/integrantes/sebastianarana.jpg" class="card-img" height="236" alt="">
-        <div class="card-img-overlay">
+      <div class="card text-white sombra box p-0">
+        <img src="../../../assets/integrantes/sebastianarana.jpg" class="card-img" alt="">
+        <div class="card-img-overlay"><br><br><br><br><br><br>
           <h5>Sebastián Arana</h5>
-          <h6>Ing. Ciencias de la computación</h6>
+          <h6>Ciencias de la computación</h6>
         </div>
       </div>
 
-      <div class="card text-white" style="width: 196px">
-        <img src="../../../assets/integrantes/carloscolina.png" class="card-img" height="236" alt="">
-        <div class="card-img-overlay">
-          <h5>Sebastián Arana</h5>
-          <h6>Ing. Ciencias de la computación</h6>
+      <div class="card text-white sombra box p-0">
+        <img src="../../../assets/integrantes/carloscolina.png" class="card-img" alt="">
+        <div class="card-img-overlay"><br><br><br><br><br><br>
+          <h5>Carlos Colina</h5>
+          <h6>Ing. Sistemas de Información</h6>
         </div>
       </div>
 
-      <div class="card text-white" style="width: 196px">
-        <img src="../../../assets/integrantes/francocasanova.png" class="card-img" height="236" alt="">
-        <div class="card-img-overlay">
-          <h5>Sebastián Arana</h5>
-          <h6>Ing. Ciencias de la computación</h6>
+      <div class="card text-white sombra box p-0">
+        <img src="../../../assets/integrantes/francocasanova.png" class="card-img" alt="">
+        <div class="card-img-overlay"><br><br><br><br><br><br>
+          <h5>Franco Casanova</h5>
+          <h6>Ing. Sistemas de Información</h6>
         </div>
       </div>
 
-      <div class="card text-white" style="width: 196px">
-        <img src="../../../assets/integrantes/julissaponte.png" class="card-img" height="236" alt="">
-        <div class="card-img-overlay">
-          <h5>Sebastián Arana</h5>
-          <h6>Ing. Ciencias de la computación</h6>
+      <div class="card text-white sombra box p-0">
+        <img src="../../../assets/integrantes/julissaponte.png" class="card-img" alt="">
+        <div class="card-img-overlay"><br><br><br><br><br><br>
+          <h5>Julissa Ponte</h5>
+          <h6>Ing. Software</h6>
         </div>
       </div>
     </div>
 
     <div class="row justify-content-around p-5">
-      <div class="card text-white" style="width: 196px">
-        <img src="../../../assets/integrantes/nicollrojas.png" class="card-img" height="236" alt="">
-        <div class="card-img-overlay">
-          <h5>Sebastián Arana</h5>
-          <h6>Ing. Ciencias de la computación</h6>
+      <div class="card text-white sombra box p-0">
+        <img src="../../../assets/integrantes/nicollrojas.png" class="card-img box-img" alt="">
+        <div class="card-img-overlay"><br><br><br><br><br><br>
+          <h5>Nicoll Rojas</h5>
+          <h6>Ing. Software</h6>
         </div>
       </div>
 
-      <div class="card text-white" style="width: 196px">
-        <img src="../../../assets/integrantes/brunocarrasco.png" class="card-img" height="236" alt="">
-        <div class="card-img-overlay">
-          <h5>Sebastián Arana</h5>
-          <h6>Ing. Ciencias de la computación</h6>
+      <div class="card text-white sombra box p-0">
+        <img src="../../../assets/integrantes/brunocarrasco.png" class="card-img" alt="">
+        <div class="card-img-overlay"><br><br><br><br><br><br>
+          <h5>Bruno Carrasco</h5>
+          <h6>Ing. Sistemas de Información</h6>
         </div>
       </div>
 
-      <div class="card text-white" style="width: 196px">
-        <img src="../../../assets/integrantes/wilmartarazona.png" class="card-img" height="236" alt="">
-        <div class="card-img-overlay">
-          <h5>Sebastián Arana</h5>
-          <h6>Ing. Ciencias de la computación</h6>
+      <div class="card text-white sombra box p-0">
+        <img src="../../../assets/integrantes/wilmartarazona.png" class="card-img" alt="">
+        <div class="card-img-overlay"><br><br><br><br><br><br>
+          <h5>Wilmar Tarazona</h5>
+          <h6>Ciencias de la computación</h6>
         </div>
       </div>
     </div>
@@ -180,14 +182,14 @@
       <div class="row mt-3">
 
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h4 class="fw-bold mb-4">UReceipt</h4>
+          <h4 class="fw-bold mb-4 fs-1">UReceipt</h4>
         </div>
 
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h5 class="fw-bold mb-4">Información</h5>
-          <p><a href="#" class="text-reset">Inicio</a></p>
-          <p><a href="#" class="text-reset">Introducción</a></p>
-          <p><a href="#" class="text-reset">Nosotros</a></p>
+          <p><a href="#1" class="text-reset">Inicio</a></p>
+          <p><a href="#2" class="text-reset">Introducción</a></p>
+          <p><a href="#3" class="text-reset">Nosotros</a></p>
           <p><a href="#" class="text-reset">Iniciar Sesión</a></p>
           <p><a href="#" class="text-reset">Registrarse</a></p>
         </div>

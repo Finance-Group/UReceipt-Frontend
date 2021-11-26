@@ -1,1 +1,35 @@
+.sombra {
+  box-shadow: rgba(0, 48, 91, 1) 15px 15px;
+}
 
+.sombra-2 {
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  border-radius: 100%;
+}
+.box {
+  width: 196px;
+  height: 236px;
+  overflow: hidden;
+  border-width: 0;
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+  .box img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+.texto {
+  background: linear-gradient(90deg,#1B97B6,#4ECCC6,#B2E5FB);
+  -webkit-background-clip: text;
+  color: transparent;
+}

@@ -50,7 +50,7 @@ color: #BB5B5B;">Persona Natural</p>
                   <div class="flex-fill mb-0">
                     <input type="number" id="num" class="form-control" formControlName="num" placeholder="num">
                     <span *ngIf="userForm.controls['num'].hasError('required') && userForm.controls['num'].touched">Campo requerido</span>
-                    <span *ngIf="userForm.controls['num'].hasError('minlength') && userForm.controls['num'].touched">Documento inválido</span>
+                    <span *ngIf="userForm.controls['num'].hasError('min') && userForm.controls['num'].touched">Documento inválido</span>
                   </div>
                 </div>
 

@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0
+}
 div .card{
     margin: 20px;
     width: 50%;
@@ -9,7 +14,6 @@ div .card{
 
 .row{
     text-align:center;
-    margin:auto;
     padding:0px;
-    
+
 }

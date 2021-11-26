@@ -46,7 +46,7 @@
         <p *ngIf="cartera.tasaId == 2">Tasa efectiva</p>
         <br>
         <p class="card-text">Valor de Tasa</p>
-        <p>{{cartera.taza}}</p>
+        <p>{{cartera.taza * 100}}%</p>
         <br>
         <p class="card-text">Periodo de Capitalización(PC)</p>
         <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 1">Anual</p>
@@ -95,7 +95,7 @@
         <p class="r" *ngIf="cartera.gastoFTotal != null && cartera.monedaId == 2">US$ {{cartera.gastoFTotal}}</p>
         <br>
         <p class="card-text">Número de recibos agregados</p>
-        <p class="r">{{cartera.numRecibos - 1}}</p>
+        <p class="r">{{cartera.numRecibos}}</p>
         <br>
         <p class="card-text">Valor Total a recibir</p>
         <p class="r" *ngIf="cartera.monedaId == 1 && cartera.monedaId == 1">S/. {{cartera.recibidoTotal.toFixed(2)}}</p>

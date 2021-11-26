@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HomeComponent } from './components/home/home.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HelpComponent } from './components/help/help.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RegisterComponent,
     HomeComponent,
     CambiarPasswordComponent,
-    NavbarComponent
+    NavbarComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

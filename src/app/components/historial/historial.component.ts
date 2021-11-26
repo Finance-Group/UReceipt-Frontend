@@ -12,14 +12,22 @@ export class HistorialComponent implements OnInit {
 
   constructor(private AppService: AppService, private router: Router) { }
 
-  personId: string
-  listCarteras: Cartera[]
+  personId: number
+  public listCarteras: Cartera[]
 
   ngOnInit(): void {
-    this.personId = this.AppService.getToken()
+    this.personId = parseInt(this.AppService.getToken())
+    this.getCarterasByPersonId()
   }
 
   getCarterasByPersonId() {
-
+    console.log(this.AppService.getToken())
+    console.log(this.personId)
+    this.AppService.getAllCarterarByPerson(this.personId)
+      .subscribe(
+        data => {
+          this.listCarteras = JSON.parse(JSON.stringify(data)).data
+          console.log(data)
+        })
   }
 }

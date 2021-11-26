@@ -1,31 +1,19 @@
-.primero{
-    position: absolute;
-    width: 417px;
-    height: 79px;
-    left: 240px;
-    top: 204px;
-
-    font-family: Roboto Slab;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 72px;
-    line-height: 95px;
-
-    color: #FFFFFF;
+.layer-1{
+  background: #00305B;
+  opacity: 80%;
+  height: 100vh;
+}
+.header-1{
+  font-family: Roboto Slab;
+  font-size: 5vw;
+  color: white;
+  margin-left: 3vw;
+  line-height: 0.5;
 }
 
-.segundo{
-    position: absolute;
-    width: 417px;
-    height: 79px;
-    left: 240px;
-    top: 250px;
-
-    font-family: Roboto Slab;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 72px;
-    line-height: 95px;
-
-    color: #FFFFFF;
+.header-2{
+  font-family: Roboto Slab;
+  font-size: 4vw;
+  color: #ffffff;
+  margin-left: 3vw;
 }

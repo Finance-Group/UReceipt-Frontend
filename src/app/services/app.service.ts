@@ -27,7 +27,7 @@ export class AppService {
   }
 
   public getAllCarterarByPerson(personaId: number): Observable<{}> {
-    return this.http.get(`${environment.api_url}personas/${personaId}/carteras`)
+    return this.http.get(`${environment.api_url}/ureceipt/personas/${personaId}/carteras`)
   }
 
   setToken(token: any) {

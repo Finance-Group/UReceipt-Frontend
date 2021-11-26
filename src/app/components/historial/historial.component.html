@@ -1,4 +1,53 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <app-navbar></app-navbar>
-<img src="../../../assets/trasfondo2.png" style="position: absolute; top: 92px;  width: 750px; height:927px">
-<p class="primero">Historial de</p>
-<p class="segundo">carteras</p>
+<div>
+  <div class="row">
+    <div class="layer-1 col-4">
+      <br>
+      <br>
+      <div>
+        <p class="header-1">Historial de</p>
+        <p class="header-2">carteras</p>
+      </div>
+    </div>
+    <div class="col-8">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row" style="height: 60vh">
+        <div class="col"></div>
+        <div class="col-6" style="background: white; border: 50px solid white">
+          <div class="d-flex justify-content-center">
+            <img src="../../../assets/logo.png" height="60" style="background: #FFFFFF; box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25); border-radius:70px">
+          </div>
+          <br>
+          <div>
+            <div class="card" *ngFor="let carteras of listCarteras" style="box-shadow: 5px 10px;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col"><i class="fa fa-clipboard"></i></div>
+                    <div class="col-8">
+                      Cartera {{carteras.id}}
+                      <p style="font-size: 2vh">Fecha de descuento: {{carteras.descuento}}</p>
+                    </div>
+                    <div class="col-2"><i class="fa fa-eye"></i></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div *ngFor="let carteras of listCarteras">
+  <h5>{{carteras.id}}</h5>
+  <p>{{carteras.descuento}}</p>
+</div>
+-->

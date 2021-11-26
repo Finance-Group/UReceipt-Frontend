@@ -21,3 +21,7 @@ p{
 img:hover{
     background-color: #BB5B5B;
 }
+
+a{
+  box-sizing: border-box;
+}

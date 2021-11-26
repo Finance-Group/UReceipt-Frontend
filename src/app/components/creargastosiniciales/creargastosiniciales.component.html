@@ -68,32 +68,28 @@
     <div class="">
 
       <div class="input-group mb-3">
-        <select *ngFor="let gasto of gastosiniciales" class="form-select" id="tipo2">
-          <option selected>Motivo</option>
-          <option value="1">{{gasto.nombre}}</option>
+        <select class="form-select" id="tipo2">
+          <option *ngFor="let gasto of gastosiniciales" value="{{gasto.id}}">{{gasto.nombre}}</option>
         </select>
       </div>
 
       <div class="row">
         <div class="col input-group mb-3">
           <select class="form-select" id="motivo2">
-            <option selected>Valor expresado en</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option *ngFor="let formato of formatos" value="{{formato.id}}">{{formato.nombre}}</option>
           </select>
         </div>
 
         <div class="col input-group mb-3">
           <span class="input-group-text" id="monto2"></span>
-          <input type="text" class="form-control" placeholder="Monto" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="number" class="form-control" placeholder="Monto" aria-label="Username" aria-describedby="basic-addon1">
         </div>
       </div>
 
     </div>
 
     <div class="d-grid gap-2">
-      <button class="btn btn-primary" type="button">AGREGAR</button>
+      <button class="btn btn-primary" type="button" href="">AGREGAR</button>
     </div>
 
     <div class="table-responsive mt-3">

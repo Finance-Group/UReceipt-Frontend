@@ -13,11 +13,10 @@ import {RecibosComponent} from "./components/recibos/recibos.component";
 import {CreargastosinicialesComponent} from "./components/creargastosiniciales/creargastosiniciales.component";
 import {CarteragastofinalComponent} from "./components/carteragastofinal/carteragastofinal.component";
 import {CrearRecibosComponent} from "./components/crear-recibos/crear-recibos.component";
-<<<<<<< HEAD
+
 import {CarteragastoinicialComponent} from "./components/carteragastoinicial/carteragastoinicial.component";
-=======
+
 import { DatosObtenidosComponent } from './components/datos-obtenidos/datos-obtenidos.component';
->>>>>>> 59ea4ecfb7d8f757e1ebe2ac84d0bd73019d3e78
 
 const routes: Routes = [
   {

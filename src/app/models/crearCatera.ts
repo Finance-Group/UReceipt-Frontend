@@ -1,4 +1,4 @@
-export interface Cartera {
+export interface CrearCatera {
   descuento: Date
   plazo: number
   tasa:number

@@ -8,6 +8,8 @@ import {CambiarPassword} from "../models/cambiarPassword";
 import {CookieService} from "ngx-cookie-service";
 import {CrearCarteraGastoInicial} from "../models/crearCarteraGastoInicial";
 import {CrearCarteraGastoFinal} from "../models/crearCarteraGastoFinal";
+import {CrearRecibo} from "../models/crearRecibo";
+import {CrearCatera} from "../models/crearCatera";
 
 @Injectable({
   providedIn: 'root'
@@ -27,15 +29,19 @@ export class AppService {
   public cambiarPassword(cambio: CambiarPassword): Observable<{}> {
     return this.http.put(`${environment.api_url}personas`, cambio)
   }
-
+  //Cartera
   public getAllCarterarByPerson(personaId: number): Observable<{}> {
     return this.http.get(`${environment.api_url}/ureceipt/personas/${personaId}/carteras`)
   }
-
   public getCarteraById(id: number): Observable<{}> {
     return this.http.get(`${environment.api_url}/ureceipt/carteras/${id}`)
   }
-
+  crearCartera(personaid: number, cartera: CrearCatera): Observable<{}> {
+    return this.http.post(`${environment.api_url}/ureceipt/carteras`, cartera)
+  }
+  public getCarteraByMonedaId(personaId: number,monedaId: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/personas/${personaId}carteras/${monedaId}`)
+  }
   setToken(token: any) {
     this.cookies.set("token", token)
   }
@@ -47,6 +53,9 @@ export class AppService {
   //Recibos
   getRecibosByCarteraId(carteraid: number): Observable<{}> {
     return this.http.get(`${environment.api_url}/ureceipt/carteras/${carteraid}/recibos`)
+  }
+  crearRecibo(carteraid: number, recibo: CrearRecibo): Observable<{}> {
+    return this.http.post(`${environment.api_url}/ureceipt/recibos`, recibo)
   }
   //Formato
   getFornatos(): Observable<{}> {
@@ -77,25 +86,33 @@ export class AppService {
   getGastosInicialesByCarteraId(carteraid: number): Observable<{}> {
     return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales`)
   }
-
   getByCarteraIdAndGastoInicialId(carteraid: number, gastoinicialid: number): Observable<{}> {
     return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales/${gastoinicialid}`)
   }
-
   crearCarteraGastoInicial(carteraid: number, carteraGastoInicial: CrearCarteraGastoInicial): Observable<{}> {
     return this.http.post(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales`, carteraGastoInicial)
   }
+  deleteCarteraGastoInicial(carteraid: number, gastoinicialid: number): Observable<{}> {
+    return this.http.delete(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales/${gastoinicialid}`)
+  }
+  // updateMontoI(carteraid: number, gastoinicialid: number, mgastoinicial: number): Observable<{}> {
+  //   return this.http.put(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales/${gastoinicialid}/${mgastoinicial}`)
+  // }
 
   //Cartera-GastoFinal
   getGastosFinalesByCarteraId(carteraid: number): Observable<{}> {
     return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosfinales`)
   }
-
   getByCarteraIdAndGastoFinalId(carteraid: number, gastofinalid: number): Observable<{}> {
-    return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales/${gastofinalid}`)
+    return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosfinales/${gastofinalid}`)
   }
-
   crearCarteraGastoFinal(carteraid: number, carteraGastoFinal: CrearCarteraGastoFinal): Observable<{}> {
     return this.http.post(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosfinales`, carteraGastoFinal)
   }
+  deleteCarteraGastoFinal(carteraid: number, gastofinalid: number): Observable<{}> {
+    return this.http.delete(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosfinales/${gastofinalid}`)
+  }
+  // updateMontoF(carteraid: number, gastofinalid: number, mgastofinal: number): Observable<{}> {
+  //   return this.http.put(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosfinales/${gastofinalid}/${mgastofinal}`)
+  // }
 }

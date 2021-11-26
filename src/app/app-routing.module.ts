@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import {CambiarPasswordComponent} from "./components/cambiar-password/cambiar-password.component";
 import { EmisionComponent } from './components/emision/emision.component';
 import { HistorialComponent } from './components/historial/historial.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'historial',
     component: HistorialComponent
+  },
+  {
+    path: 'filter',
+    component: FilterComponent
   }
 ];
 

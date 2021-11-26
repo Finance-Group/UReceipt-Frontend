@@ -1,0 +1,19 @@
+p{
+    position: absolute;
+    width: 229px;
+    height: 46px;
+    top: 490px;
+
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+img:hover{
+    background-color: #BB5B5B;
+}

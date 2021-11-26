@@ -16,6 +16,7 @@ import { EmisionComponent } from './components/emision/emision.component';
 import {HistorialComponent} from './components/historial/historial.component';
 import { RecibosComponent } from './components/recibos/recibos.component';
 import { GastosComponent } from './components/gastos/gastos.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { GastosComponent } from './components/gastos/gastos.component';
     EmisionComponent,
     HistorialComponent,
     RecibosComponent,
-    GastosComponent
+    GastosComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

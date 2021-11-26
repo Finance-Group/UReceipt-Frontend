@@ -22,6 +22,7 @@ import { CarteragastofinalComponent } from './components/carteragastofinal/carte
 import { CreargastosinicialesComponent } from './components/creargastosiniciales/creargastosiniciales.component';
 import { TasaComponent } from './components/tasa/tasa.component';
 import {CrearRecibosComponent} from "./components/crear-recibos/crear-recibos.component";
+import { DatosObtenidosComponent } from './components/datos-obtenidos/datos-obtenidos.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {CrearRecibosComponent} from "./components/crear-recibos/crear-recibos.co
     CarteragastofinalComponent,
     CreargastosinicialesComponent,
     TasaComponent,
-    CrearRecibosComponent
+    CrearRecibosComponent,
+    DatosObtenidosComponent
   ],
   imports: [
     BrowserModule,

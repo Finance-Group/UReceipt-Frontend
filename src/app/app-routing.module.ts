@@ -13,6 +13,7 @@ import {RecibosComponent} from "./components/recibos/recibos.component";
 import {CreargastosinicialesComponent} from "./components/creargastosiniciales/creargastosiniciales.component";
 import {CarteragastofinalComponent} from "./components/carteragastofinal/carteragastofinal.component";
 import {CrearRecibosComponent} from "./components/crear-recibos/crear-recibos.component";
+import {CarteragastoinicialComponent} from "./components/carteragastoinicial/carteragastoinicial.component";
 
 const routes: Routes = [
   {
@@ -57,11 +58,15 @@ const routes: Routes = [
   },
   {
     path: 'gastosiniciales',
-    component: CreargastosinicialesComponent
+    component: CarteragastoinicialComponent
   },
   {
     path: 'gastosfinales',
     component: CarteragastofinalComponent
+  },
+  {
+    path: 'creargastos',
+    component: CreargastosinicialesComponent
   },
   {
     path: 'tasa',

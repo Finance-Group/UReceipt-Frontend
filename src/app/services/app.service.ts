@@ -46,32 +46,56 @@ export class AppService {
 
   //Recibos
   getRecibosByCarteraId(carteraid: number): Observable<{}> {
-    return this.http.get(`${environment.api_url}carteras/${carteraid}/recibos`)
+    return this.http.get(`${environment.api_url}/ureceipt/carteras/${carteraid}/recibos`)
+  }
+  //Formato
+  getFornatos(): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/formatos`)
+  }
+
+  getFormatoById(formatoId: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/formatos/${formatoId}`)
+  }
+  //Gastos
+  getGastosIniciales(): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/gastosiniciales`)
+  }
+
+  getGastoInicialById(gastoinicialId: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/gastosiniciales/${gastoinicialId}`)
+  }
+
+  getGastosFinales(): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/gastosfinales`)
+  }
+
+  getGastoFinalById(gastofinalId: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/gastosfinales/${gastofinalId}`)
   }
 
   //Cartera-GastoInicial
   getGastosInicialesByCarteraId(carteraid: number): Observable<{}> {
-    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosiniciales`)
+    return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales`)
   }
 
   getByCarteraIdAndGastoInicialId(carteraid: number, gastoinicialid: number): Observable<{}> {
-    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosiniciales/${gastoinicialid}`)
+    return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales/${gastoinicialid}`)
   }
 
   crearCarteraGastoInicial(carteraid: number, carteraGastoInicial: CrearCarteraGastoInicial): Observable<{}> {
-    return this.http.post(`${environment.api_url}cartera/${carteraid}/gastosiniciales`, carteraGastoInicial)
+    return this.http.post(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales`, carteraGastoInicial)
   }
 
   //Cartera-GastoFinal
   getGastosFinalesByCarteraId(carteraid: number): Observable<{}> {
-    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosfinales`)
+    return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosfinales`)
   }
 
   getByCarteraIdAndGastoFinalId(carteraid: number, gastofinalid: number): Observable<{}> {
-    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosiniciales/${gastofinalid}`)
+    return this.http.get(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosiniciales/${gastofinalid}`)
   }
 
   crearCarteraGastoFinal(carteraid: number, carteraGastoFinal: CrearCarteraGastoFinal): Observable<{}> {
-    return this.http.post(`${environment.api_url}cartera/${carteraid}/gastosfinales`, carteraGastoFinal)
+    return this.http.post(`${environment.api_url}/ureceipt/cartera/${carteraid}/gastosfinales`, carteraGastoFinal)
   }
 }

@@ -1,117 +1,67 @@
 <app-navbar></app-navbar>
-<img src="../../../assets/trasfondo2.png" style="position: absolute; top: 92px;  width: 800px; height:927px">
-<p style="position: absolute;
-width: 417px;
-height: 79px;
-left: 310px;
-top: 204px;
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-5 container p-5 fondo">
+      <div class="mb-5">
+        <h1 class="font-weight-bold text-white">Registro de</h1>
+        <h1 class="font-weight-bold text-danger">persona natural</h1>
+      </div>
+    </div>
 
-font-family: Roboto Slab;
-font-style: normal;
-font-weight: bold;
-font-size: 72px;
-line-height: 95px;
-
-color: #FFFFFF;">Registro de </p>
-<p style="position: absolute;
-width: 354px;
-height: 107px;
-left: 310px;
-top: 283px;
-
-font-family: Roboto Slab;
-font-style: normal;
-font-weight: bold;
-font-size: 64px;
-line-height: 84px;
-
-color: #BB5B5B;">Persona Natural</p>
-<section class="vh-100 fondo" style="background-color: #eee; margin-left: calc(50% + 20px); height: 30vh">
-  <div class="container vh-100" style="width: 600px">
-    <div class="row d-flex justify-content-center align-items-center; margin:0px">
-      <div class="card text-black" style="border-radius: 25px; margin:0px">
-        <div class="card-body p-md-5" style="margin:0px">
-          <div class="row justify-content-center" style="margin:0px">
-            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-
-              <!-- <p class="text-center h1">Regístrate</p> -->
-              <p style="
-              font-family: Roboto;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 24px;
-              line-height: 28px;
-
-              color: #000000; text-align: center" >Regístrate</p>
-              <form class="mx-1 mx-md-4" [formGroup]="userForm" (submit)="register()">
-
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fa fa-user fa-lg me-3 fa-fw"></i>
-                  <div class="flex-fill mb-0">
-                    <input type="number" id="num" class="form-control" formControlName="num" placeholder="num">
-                    <span *ngIf="userForm.controls['num'].hasError('required') && userForm.controls['num'].touched">Campo requerido</span>
-                    <span *ngIf="userForm.controls['num'].hasError('min') && userForm.controls['num'].touched">Documento inválido</span>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fa fa-user fa-lg me-3 fa-fw"></i>
-                  <div class="flex-fill mb-0">
-                    <input type="text" id="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
-                    <span *ngIf="userForm.controls['nombre'].hasError('required') && userForm.controls['nombre'].touched">Campo requerido</span>
-                  </div>
-                </div>
-
-
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fa fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div class="flex-fill mb-0">
-                    <input type="text" id="correo" class="form-control" formControlName="correo" placeholder="Correo">
-                    <span *ngIf="userForm.controls['correo'].hasError('required') && userForm.controls['correo'].touched">Campo requerido</span>
-                    <span *ngIf="userForm.controls['correo'].hasError('email') && userForm.controls['correo'].touched">Correo inválido</span>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fa fa-lock fa-lg me-3 fa-fw"></i>
-                  <div class="flex-fill mb-0">
-                    <input type="password" id="password" class="form-control" formControlName="password" placeholder="Contraseña">
-                    <span *ngIf="userForm.controls['password'].hasError('required') && userForm.controls['password'].touched">Campo requerido</span>
-                    <span *ngIf="userForm.controls['password'].hasError('minlength') && userForm.controls['password'].touched">Contraseña muy corta</span>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fa fa-key fa-lg me-3 fa-fw"></i>
-                  <div class="flex-fill mb-0">
-                    <input type="number" id="ruc" class="form-control" formControlName="ruc" placeholder="Ruc">
-                    <span *ngIf="userForm.controls['ruc'].hasError('required') && userForm.controls['ruc'].touched">Campo requerido</span>
-                    <span *ngIf="userForm.controls['ruc'].hasError('min') && userForm.controls['ruc'].touched">ruc muy corta</span>
-                    <span *ngIf="userForm.controls['ruc'].hasError('max') && userForm.controls['ruc'].touched">ruc muy larga</span>
-
-                  </div>
-                </div>
-
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fa fa-gears fa-lg me-3 fa-fw"></i>
-                  <div class="flex-fill mb-0">
-                    <input type="number" id="documentoId" class="form-control" formControlName="documentoId" placeholder="documentoId">
-                    <span *ngIf="userForm.controls['documentoId'].hasError('required') && userForm.controls['documentoId'].touched">Campo requerido</span>
-                  </div>
-                </div>
-
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <p class="form-check-label">¿Ya estás registrado? <a href="/login" class="form-check-label">Inicia Sesión</a></p>
-                </div>
-
-                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                  <button class="btn btn-primary btn-lg" [disabled]="!userForm.valid">Registrar</button>
-                </div>
-
-              </form>
+    <div class="col">
+      <div class="card mx-auto m-5" style="width: 50%">
+        <h2 class="text-center">Regístrate</h2>
+        <div class="card-body">
+          <form class="" [formGroup]="userForm" (submit)="register()">
+            <div class="form-group">
+              <label for="num" class="form-label">Cuál es tu documento?</label>
+              <input type="number" id="num" class="form-control" formControlName="num" placeholder="num">
+              <span *ngIf="userForm.controls['num'].hasError('required') && userForm.controls['num'].touched">Campo requerido</span>
+              <span *ngIf="userForm.controls['num'].hasError('min') && userForm.controls['num'].touched">Documento inválido</span>
             </div>
 
-          </div>
+            <div class="form-group">
+              <label for="num" class="form-label">Cuál es tu nombre?</label>
+              <input type="text" id="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
+              <span *ngIf="userForm.controls['nombre'].hasError('required') && userForm.controls['nombre'].touched">Campo requerido</span>
+            </div>
+
+            <div class="form-group">
+              <label for="num" class="form-label">Cuál es tu correo electrónico?</label>
+              <input type="text" id="correo" class="form-control" formControlName="correo" placeholder="Correo">
+              <span *ngIf="userForm.controls['correo'].hasError('required') && userForm.controls['correo'].touched">Campo requerido</span>
+              <span *ngIf="userForm.controls['correo'].hasError('email') && userForm.controls['correo'].touched">Correo inválido</span>
+            </div>
+
+            <div class="form-group">
+              <label for="num" class="form-label">Crea una contraseña</label>
+              <input type="password" id="password" class="form-control" formControlName="password" placeholder="Contraseña">
+              <span *ngIf="userForm.controls['password'].hasError('required') && userForm.controls['password'].touched">Campo requerido</span>
+              <span *ngIf="userForm.controls['password'].hasError('minlength') && userForm.controls['password'].touched">Contraseña muy corta</span>
+            </div>
+
+            <div class="form-group">
+              <label for="num" class="form-label">Cuál es tu RUC?</label>
+              <input type="number" id="ruc" class="form-control" formControlName="ruc" placeholder="Ruc">
+              <span *ngIf="userForm.controls['ruc'].hasError('required') && userForm.controls['ruc'].touched">Campo requerido</span>
+              <span *ngIf="userForm.controls['ruc'].hasError('min') && userForm.controls['ruc'].touched">ruc muy corta</span>
+              <span *ngIf="userForm.controls['ruc'].hasError('max') && userForm.controls['ruc'].touched">ruc muy larga</span>
+            </div>
+
+            <div class="form-group">
+              <input type="number" id="documentoId" class="form-control" formControlName="documentoId" placeholder="documentoId">
+              <span *ngIf="userForm.controls['documentoId'].hasError('required') && userForm.controls['documentoId'].touched">Campo requerido</span>
+            </div>
+
+            <div class="form-check d-flex justify-content-center mb-5">
+              <p class="form-check-label">¿Ya estás registrado? <a href="/login" class="form-check-label">Inicia Sesión</a></p>
+            </div>
+
+            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+              <button class="btn btn-primary btn-lg" [disabled]="!userForm.valid">Registrar</button>
+            </div>
+
+          </form>
         </div>
       </div>
     </div>

@@ -3,3 +3,15 @@ body {
   background-image: url("assets/fondo.jpg");
   background-size:cover;
 }
+.fondo {
+  background-color: rgba(0, 48, 91, 0.8);
+}
+.fondo-2 {
+  background-color: rgba(0, 48, 91, 1);
+}
+.fondo-3 {
+  background-color: rgba(234, 244, 246, 1);
+}
+.color {
+  color: rgba(0, 48, 91, 1);
+}

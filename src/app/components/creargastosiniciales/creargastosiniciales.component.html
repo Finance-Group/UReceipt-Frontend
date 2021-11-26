@@ -1,1 +1,123 @@
-<div></div>
+<div class="container">
+  <div class="bg-white p-5">
+
+    <h2 class="text-center">Costos / Gastos iniciales</h2>
+    <div class="">
+
+      <div class="input-group mb-3">
+        <select class="form-select" id="tipo">
+          <option selected>Motivo</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="col input-group mb-3">
+          <select class="form-select" id="formato">
+            <option selected>Valor expresado en</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col input-group mb-3">
+          <span class="input-group-text" id="monto"></span>
+          <input type="text" class="form-control" placeholder="Monto" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button">AGREGAR</button>
+    </div>
+
+    <div class="table-responsive mt-3">
+      <table class="table table-bordered">
+        <thead class="table-light">
+        <tr>
+          <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="col" *ngFor="let el of elements">
+          <th scope="row">{{el.id}}</th>
+          <td>{{el.carteraId}}</td>
+          <td>{{el.gastoFinalId}}</td>
+          <td>{{el.formatoId}}</td>
+          <td>{{el.mGastoFinal}}</td>
+          <td><a href=""><img src="../../../assets/edit.png" alt=""> </a></td>
+          <td><a href=""><img src="../../../assets/delete.png" alt=""> </a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="bg-white p-5">
+
+    <h2 class="text-center">Costos / Gastos finales</h2>
+    <div class="">
+
+      <div class="input-group mb-3">
+        <select *ngFor="let gasto of gastosiniciales" class="form-select" id="tipo2">
+          <option selected>Motivo</option>
+          <option value="1">{{gasto.nombre}}</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="col input-group mb-3">
+          <select class="form-select" id="motivo2">
+            <option selected>Valor expresado en</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col input-group mb-3">
+          <span class="input-group-text" id="monto2"></span>
+          <input type="text" class="form-control" placeholder="Monto" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button">AGREGAR</button>
+    </div>
+
+    <div class="table-responsive mt-3">
+      <table class="table table-bordered">
+        <thead class="table-light">
+        <tr>
+          <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="col" *ngFor="let el of elements">
+          <th scope="row">{{el.id}}</th>
+          <td>{{el.carteraId}}</td>
+          <td>{{el.gastoFinalId}}</td>
+          <td>{{el.formatoId}}</td>
+          <td>{{el.mGastoFinal}}</td>
+          <td><a href=""><img src="../../../assets/edit.png" alt=""> </a></td>
+          <td><a href=""><img src="../../../assets/delete.png" alt=""> </a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>

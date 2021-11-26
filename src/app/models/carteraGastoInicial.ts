@@ -3,5 +3,5 @@ export interface CarteraGastoInicial {
   carteraId: number
   gastoInicialId: number
   formatoId: number
-  mGastoFinal: number
+  mGastoInicial: number
 }

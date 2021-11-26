@@ -8,6 +8,7 @@ import { EmisionComponent } from './components/emision/emision.component';
 import { HistorialComponent } from './components/historial/historial.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { CarteraxComponent } from './components/carterax/carterax.component';
+import { TasaComponent } from './components/tasa/tasa.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'gastosfinales',
     component: CarteraxComponent
+  },
+  {
+    path: 'tasa',
+    component: TasaComponent
   }
 ];
 

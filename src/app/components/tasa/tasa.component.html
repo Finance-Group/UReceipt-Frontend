@@ -1,7 +1,42 @@
 <app-navbar></app-navbar>
-
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-title"><h1>Tasa y Plazo</h1></div>
+      <form>
+        <div>
+          <select name="Días por año" formControlName="dias">
+            <option value="" selected disabled>Días por año</option>
+            <option value="360">Comercial</option>
+            <option value="365">Real</option>
+          </select>
+        </div>
+        <div>
+          <select name="Plazo de tasa" formControlName="plazo">
+            <option value="" selected disabled>Plazo de tasa</option>
+            <option value="360">Anual</option>
+            <option value="180">Semestral</option>
+            <option value="120">Cuatrimestral</option>
+            <option value="90">Trimestral</option>
+            <option value="60">Bimestral</option>
+            <option value="30">Mensual</option>
+            <option value="15">Quincenal</option>
+            <option value="7">Semanal</option>
+            <option value="1">Diario</option>
+            <option value="0">Especial</option>
+          </select>
+          <input type="text" disabled placeholder="Valor">
+        </div>
+        <div>
+          <select name="" id=""></select>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--
 <div class="card" style="width: 18rem;">
-    <div class="card-body">
+    <div class="card-body" style="width: 5vw">
         <h5 class="card-title">Tasa y Plazo</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -16,6 +51,7 @@
                     <option>4</option>
                     <option>5</option>
                 </select>
+<<<<<<< Updated upstream
             </div> 
             <div class="form-group mx-sm-3">
                 <label for="inputUser" class="sr-only">User</label>
@@ -26,7 +62,10 @@
                 <input type="password" class="form-control" id="inputPass" placeholder="Pass">
             </div>
             <button type="submit" class="btn btn-primary">Confirm</button>   
+=======
+            </div>
+>>>>>>> Stashed changes
         </form>
     </div>
   </div>
-
+-->

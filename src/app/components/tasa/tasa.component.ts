@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-tasa',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasaComponent implements OnInit {
 
-  constructor() { }
+  carteraForm: FormGroup
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.initForm()
+  }
+
+  initForm(): void {
+    this.carteraForm = this.fb.group({
+      dias: ['', Validators.required],
+      plazo: ['', Validators.required],
+      tasa: ['', Validators.required],
+      pc: [''],
+      fecha: ['', Validators.required],
+      moneda: ['', Validators.required]
+    })
   }
 
 }

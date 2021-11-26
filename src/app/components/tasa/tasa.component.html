@@ -35,6 +35,31 @@
           </select>
           <input type="text" disabled placeholder="Valor">
         </div>
+        <div>
+          <select name="Periodo de capitalizacion" formControlName="pc">
+            <option value="" selected disabled>Periodo de Capitalización</option>
+            <option value="0">Tasa Efectiva</option>
+            <option value="1">Tasa Nominal</option>
+          </select>
+          <input type="text" disabled placeholder="Valor">
+        </div>
+      
+        <div>
+          <input type="date" id="start" name="trip-start"
+          value="2018-07-22"
+          min="2018-01-01" max="2018-12-31">
+
+          <div>
+            <select name="Tipo de moneda" formControlName="moneda">
+              <option value="" selected disabled>Tipo de moneda</option>
+              <option value="0">Soles</option>
+              <option value="1">Dólares</option>
+            </select>
+            <input type="number" disabled placeholder="Valor">
+          </div>
+        </div>
+
+
       </form>
     </div>
   </div>

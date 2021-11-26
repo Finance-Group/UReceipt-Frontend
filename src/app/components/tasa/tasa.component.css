@@ -1,11 +1,15 @@
-
-
 div .card{
     margin: 20px;
-    width: 100%;
+    width: 50%;
 }
 
 .form-group select{
     width:70%;
 }
 
+.row{
+    text-align:center;
+    margin:auto;
+    padding:0px;
+    
+}

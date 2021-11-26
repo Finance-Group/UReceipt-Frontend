@@ -1,17 +1,17 @@
 <app-navbar></app-navbar>
-
 <div class="row">
   <div class="col">
-    <div class="card">
-      <div class="card-title"><h1>Tasa y Plazo</h1></div>
-      <br>
-      <br>
+    <div class="card align-items-center">
+      <div class="card-title">
+        <h1>Tasa y Plazo</h1>
+        <br>
+      </div>
       <form>
         <div>
-          <select name="Días por año" formControlName="dias">
-            <option value="" selected disabled>Días por año</option>
-            <option value="360">Comercial</option>
-            <option value="365">Real</option>
+          <select name="Días por año" formControlName="dias" id="dda">
+            <option value="Días por año" selected disabled>Días por año</option>
+            <option value="360">360</option>
+            <option value="365">365</option>
           </select>
         </div>
         <div>
@@ -28,7 +28,6 @@
             <option value="1">Diario</option>
             <option value="0">Especial</option>
           </select>
-          <input type="text" disabled placeholder="Valor">
         </div>
         <div>
           <select name="Tipo de Tasa" formControlName="tasa">
@@ -36,7 +35,6 @@
             <option value="0">Tasa Efectiva</option>
             <option value="1">Tasa Nominal</option>
           </select>
-          <input type="text" disabled placeholder="Valor">
         </div>
         <div>
           <select name="Periodo de capitalizacion" formControlName="pc">
@@ -44,9 +42,8 @@
             <option value="0">Tasa Efectiva</option>
             <option value="1">Tasa Nominal</option>
           </select>
-          <input type="text" disabled placeholder="Valor">
         </div>
-      
+
         <div>
           <input type="date" id="start" name="trip-start"
           value="2018-07-22"
@@ -58,12 +55,10 @@
               <option value="0">Soles</option>
               <option value="1">Dólares</option>
             </select>
-            <input type="number" disabled placeholder="Valor">
           </div>
         </div>
-
-
       </form>
     </div>
   </div>
+  <div class="col"></div>
 </div>

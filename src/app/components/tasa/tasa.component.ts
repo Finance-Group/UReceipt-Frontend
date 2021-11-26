@@ -9,7 +9,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class TasaComponent implements OnInit {
 
   carteraForm: FormGroup
-
+  public ddyear: any
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -26,5 +26,7 @@ export class TasaComponent implements OnInit {
       moneda: ['', Validators.required]
     })
   }
+
+
 
 }

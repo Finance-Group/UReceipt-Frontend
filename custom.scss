@@ -1,3 +1,9 @@
+@import "/node_modules/bootstrap/scss/bootstrap";
+
+/* 1. import only the necessary Bootstrap files */
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+/* 2. begin customization ---- */
 $primary: #00305B;
 $secondary: #EAF4F6;
 $danger: #BB5B5B;
@@ -9,6 +15,6 @@ $theme-colors: (
   "danger": $danger,
   "info": $info
 );
-
-@import "/node_modules/bootstrap/scss/bootstrap";
-
+/* --- end customization ------ */
+/* 3. import Bootstrap to set the changes! */
+@import "node_modules/bootstrap";

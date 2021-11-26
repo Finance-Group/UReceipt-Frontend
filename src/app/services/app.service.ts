@@ -37,4 +37,17 @@ export class AppService {
   getToken() {
     return this.cookies.get("token")
   }
+
+  //Recibos
+  getRecibosByCarteraId(carteraid: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}carteras/${carteraid}/recibos`)
+  }
+  //Gastos Iniciales
+  getGastosInicialesByCarteraId(carteraid: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosiniciales`)
+  }
+  //Gastos Finales
+  getGastosFinalesByCarteraId(carteraid: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosfinales`)
+  }
 }

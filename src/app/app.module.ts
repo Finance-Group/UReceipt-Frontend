@@ -15,9 +15,10 @@ import { HelpComponent } from './components/help/help.component';
 import { EmisionComponent } from './components/emision/emision.component';
 import {HistorialComponent} from './components/historial/historial.component';
 import { RecibosComponent } from './components/recibos/recibos.component';
-import { GastosComponent } from './components/gastos/gastos.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { CarteraxComponent } from './components/carterax/carterax.component';
+import { CarteragastoinicialComponent } from './components/carteragastoinicial/carteragastoinicial.component';
+import { CarteragastofinalComponent } from './components/carteragastofinal/carteragastofinal.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,10 @@ import { CarteraxComponent } from './components/carterax/carterax.component';
     EmisionComponent,
     HistorialComponent,
     RecibosComponent,
-    GastosComponent,
     FilterComponent,
-    CarteraxComponent
+    CarteraxComponent,
+    CarteragastoinicialComponent,
+    CarteragastofinalComponent
   ],
   imports: [
     BrowserModule,

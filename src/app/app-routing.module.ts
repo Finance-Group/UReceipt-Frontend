@@ -45,6 +45,18 @@ const routes: Routes = [
   {
     path: 'carterax',
     component: CarteraxComponent
+  },
+  {
+    path: 'recibos',
+    component: CarteraxComponent
+  },
+  {
+    path: 'gastosiniciales',
+    component: CarteraxComponent
+  },
+  {
+    path: 'gastosfinales',
+    component: CarteraxComponent
   }
 ];
 

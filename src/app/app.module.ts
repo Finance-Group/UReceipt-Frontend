@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HomeComponent } from './components/home/home.component';
+import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    CambiarPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -11,8 +11,8 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HomeComponent } from './components/home/home.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HelpComponent } from './components/help/help.component';
 import { EmisionComponent } from './components/emision/emision.component';
-import { HistorialComponent } from './components/historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +22,8 @@ import { HistorialComponent } from './components/historial/historial.component';
     HomeComponent,
     CambiarPasswordComponent,
     NavbarComponent,
-    EmisionComponent,
-    HistorialComponent
+    HelpComponent,
+    EmisionComponent
   ],
   imports: [
     BrowserModule,

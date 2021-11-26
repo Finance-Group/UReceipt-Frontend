@@ -10,6 +10,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HomeComponent } from './components/home/home.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    CambiarPasswordComponent
+    CambiarPasswordComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

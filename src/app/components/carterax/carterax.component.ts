@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AppService} from "../../services/app.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Cartera} from "../../models/cartera";
 
 @Component({
   selector: 'app-carterax',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarteraxComponent implements OnInit {
 
-  constructor() { }
+  public carteraId: number
+  public cartera: Cartera
 
-  ngOnInit(): void {
+  constructor(private router: Router, private AppService: AppService, private route: ActivatedRoute) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((paramMap: any) => {
+      const { params } = paramMap;
+      this.carteraId = params.id;
+    })
+    this.detalleCartera()
+  }
+
+  public detalleCartera() {
+    this.AppService.getCarteraById(this.carteraId)
+      .subscribe(data => {
+        this.cartera = JSON.parse(JSON.stringify(data)).data
+        console.log(this.cartera)
+      })
+  }
 }

@@ -32,7 +32,9 @@
                       Cartera {{carteras.id}}
                       <p style="font-size: 2vh">Fecha de descuento: {{carteras.descuento}}</p>
                     </div>
-                    <div class="col-2"><i class="fa fa-eye"></i></div>
+                    <div class="col-2">
+                      <a [routerLink]="['/', 'carterax', carteras?.id]"><i class="fa fa-eye"></i></a>
+                    </div>
                   </div>
                 </li>
               </ul>

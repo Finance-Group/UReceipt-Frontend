@@ -43,7 +43,7 @@ const routes: Routes = [
     component: FilterComponent
   },
   {
-    path: 'carterax',
+    path: 'carterax/:id',
     component: CarteraxComponent
   },
   {

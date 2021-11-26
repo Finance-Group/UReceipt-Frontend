@@ -30,6 +30,10 @@ export class AppService {
     return this.http.get(`${environment.api_url}/ureceipt/personas/${personaId}/carteras`)
   }
 
+  public getCarteraById(id: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}/ureceipt/carteras/${id}`)
+  }
+
   setToken(token: any) {
     this.cookies.set("token", token)
   }

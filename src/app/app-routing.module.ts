@@ -8,6 +8,10 @@ import { EmisionComponent } from './components/emision/emision.component';
 import { HistorialComponent } from './components/historial/historial.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { CarteraxComponent } from './components/carterax/carterax.component';
+import {RecibosComponent} from "./components/recibos/recibos.component";
+import {CreargastosinicialesComponent} from "./components/creargastosiniciales/creargastosiniciales.component";
+import {CarteragastoinicialComponent} from "./components/carteragastoinicial/carteragastoinicial.component";
+import {CarteragastofinalComponent} from "./components/carteragastofinal/carteragastofinal.component";
 
 const routes: Routes = [
   {
@@ -48,15 +52,15 @@ const routes: Routes = [
   },
   {
     path: 'recibos',
-    component: CarteraxComponent
+    component: RecibosComponent
   },
   {
     path: 'gastosiniciales',
-    component: CarteraxComponent
+    component: CarteragastoinicialComponent
   },
   {
     path: 'gastosfinales',
-    component: CarteraxComponent
+    component: CarteragastofinalComponent
   }
 ];
 

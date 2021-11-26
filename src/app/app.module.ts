@@ -13,6 +13,7 @@ import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HelpComponent } from './components/help/help.component';
 import { EmisionComponent } from './components/emision/emision.component';
+import {HistorialComponent} from './components/historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EmisionComponent } from './components/emision/emision.component';
     CambiarPasswordComponent,
     NavbarComponent,
     HelpComponent,
-    EmisionComponent
+    EmisionComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,

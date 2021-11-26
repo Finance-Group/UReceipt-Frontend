@@ -13,6 +13,7 @@ import {RecibosComponent} from "./components/recibos/recibos.component";
 import {CreargastosinicialesComponent} from "./components/creargastosiniciales/creargastosiniciales.component";
 import {CarteragastofinalComponent} from "./components/carteragastofinal/carteragastofinal.component";
 import {CrearRecibosComponent} from "./components/crear-recibos/crear-recibos.component";
+import { DatosObtenidosComponent } from './components/datos-obtenidos/datos-obtenidos.component';
 
 const routes: Routes = [
   {
@@ -71,6 +72,10 @@ const routes: Routes = [
     path: 'recibo-nuevo',
     component: CrearRecibosComponent
   },
+  {
+    path: 'datos-obtenidos',
+    component: DatosObtenidosComponent
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

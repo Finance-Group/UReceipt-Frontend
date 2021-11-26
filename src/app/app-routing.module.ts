@@ -70,9 +70,8 @@ const routes: Routes = [
   {
     path: 'recibo-nuevo',
     component: CrearRecibosComponent
-  }
+  },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

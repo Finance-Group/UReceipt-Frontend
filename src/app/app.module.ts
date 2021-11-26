@@ -19,11 +19,9 @@ import { FilterComponent } from './components/filter/filter.component';
 import { CarteraxComponent } from './components/carterax/carterax.component';
 import { CarteragastoinicialComponent } from './components/carteragastoinicial/carteragastoinicial.component';
 import { CarteragastofinalComponent } from './components/carteragastofinal/carteragastofinal.component';
-<<<<<<< HEAD
 import { CreargastosinicialesComponent } from './components/creargastosiniciales/creargastosiniciales.component';
-=======
 import { TasaComponent } from './components/tasa/tasa.component';
->>>>>>> 6afd2947fbf8d43829f8f086ea4bb7c5d892673f
+import {CrearRecibosComponent} from "./components/crear-recibos/crear-recibos.component";
 
 @NgModule({
   declarations: [
@@ -42,7 +40,8 @@ import { TasaComponent } from './components/tasa/tasa.component';
     CarteragastoinicialComponent,
     CarteragastofinalComponent,
     CreargastosinicialesComponent,
-    TasaComponent
+    TasaComponent,
+    CrearRecibosComponent
   ],
   imports: [
     BrowserModule,

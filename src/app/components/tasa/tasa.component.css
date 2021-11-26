@@ -2,6 +2,10 @@
 
 div .card{
     margin: 20px;
-    
+    width: 100%;
+}
+
+.form-group select{
+    width:70%;
 }
 

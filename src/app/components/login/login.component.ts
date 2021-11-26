@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private AppService: AppService, private router: Router) { }
 
   ngOnInit(): void {
+    if(this.AppService.getToken() != undefined) this.router.navigate(["../emision"])
     this.initForm()
   }
 
@@ -34,7 +35,10 @@ export class LoginComponent implements OnInit {
     let r = new IniciarLogin();
     r.username = this.userForm.value.username
     r.password = this.userForm.value.password
-    this.AppService.loginn(r).subscribe((data: any) => {console.log(data)});
+    this.AppService.loginn(r).subscribe((data: any) => {
+      this.AppService.setToken(r.username)
+      this.router.navigate(["../emision"])
+    });
   }
 
 }

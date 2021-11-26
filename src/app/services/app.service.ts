@@ -5,13 +5,14 @@ import { CrearPersona} from "../models/crearPersona"
 import { environment } from "../../environments/environment";
 import { IniciarLogin } from '../models/iniciarLogin';
 import {CambiarPassword} from "../models/cambiarPassword";
+import {CookieService} from "ngx-cookie-service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cookies: CookieService) { }
 
   public loginn(como: IniciarLogin) {
     return this.http.post(`${environment.api_url}personas/login`, como);
@@ -23,5 +24,17 @@ export class AppService {
 
   public cambiarPassword(cambio: CambiarPassword): Observable<{}> {
     return this.http.put(`${environment.api_url}personas`, cambio)
+  }
+
+  public getAllCarterarByPerson(personaId: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}personas/${personaId}/carteras`)
+  }
+
+  setToken(token: any) {
+    this.cookies.set("token", token)
+  }
+
+  getToken() {
+    return this.cookies.get("token")
   }
 }

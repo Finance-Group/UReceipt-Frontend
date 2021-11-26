@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private AppService: AppService, private router: Router) { }
 
   ngOnInit(): void {
-    if(this.AppService.getToken() != undefined) this.router.navigate(["../emision"])
+    if(parseInt(this.AppService.getToken()) > 0) this.router.navigate(["../emision"])
     this.initForm()
   }
 

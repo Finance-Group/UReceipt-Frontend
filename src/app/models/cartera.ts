@@ -1,4 +1,4 @@
-export interface Cartera {
+export class Cartera {
   id: number
   descuento: Date
   plazo: number

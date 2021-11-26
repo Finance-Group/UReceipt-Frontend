@@ -14,6 +14,7 @@ export class HistorialComponent implements OnInit {
 
   personId: number
   public listCarteras: Cartera[]
+  public cantidadCarteras: number
 
   ngOnInit(): void {
     this.personId = parseInt(this.AppService.getToken())
@@ -28,6 +29,12 @@ export class HistorialComponent implements OnInit {
         data => {
           this.listCarteras = JSON.parse(JSON.stringify(data)).data
           console.log(data)
+          this.cantidadCarteras = this.listCarteras.length
+          console.log(this.cantidadCarteras)
         })
+  }
+
+  redirect() {
+    this.router.navigate(["../filter"])
   }
 }

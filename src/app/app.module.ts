@@ -14,6 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HelpComponent } from './components/help/help.component';
 import { EmisionComponent } from './components/emision/emision.component';
 import {HistorialComponent} from './components/historial/historial.component';
+import { RecibosComponent } from './components/recibos/recibos.component';
+import { GastosComponent } from './components/gastos/gastos.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {HistorialComponent} from './components/historial/historial.component';
     NavbarComponent,
     HelpComponent,
     EmisionComponent,
-    HistorialComponent
+    HistorialComponent,
+    RecibosComponent,
+    GastosComponent
   ],
   imports: [
     BrowserModule,

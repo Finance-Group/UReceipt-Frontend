@@ -41,11 +41,8 @@ import { TasaComponent } from './components/tasa/tasa.component';
     CarteraxComponent,
     CarteragastoinicialComponent,
     CarteragastofinalComponent,
-<<<<<<< HEAD
-    CreargastosinicialesComponent
-=======
+    CreargastosinicialesComponent,
     TasaComponent
->>>>>>> 6afd2947fbf8d43829f8f086ea4bb7c5d892673f
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,113 @@
 <app-navbar></app-navbar>
-<img src="../../../assets/trasfondo2.png" style="position: absolute; top: 92px;  width: 750px; height:927px">
-<p>carterax works!</p>
-<h1>{{cartera.id}}</h1>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="letras">
+          <span class="card-title" style="color: #1B97B6; font-size: 24px;">Datos </span>
+          <span style="color: black; font-size: 24px;"><strong>ingresados</strong></span>
+          <span style="color: #1B97B6; font-size: 24px;"> de la cartera</span>
+        </div>
+        <br>
+        <br>
+        <p class="card-text">Fecha de Descuento</p>
+        <p>{{cartera.descuento}}</p>
+        <br>
+        <p class="card-text">Días por año(DA)</p>
+        <p *ngIf="cartera.diaId == 1">360 dias</p>
+        <p *ngIf="cartera.diaId == 2">365 dias</p>
+        <br>
+        <p class="card-text">Plazo de Tasa(P)</p>
+        <p *ngIf="cartera.plazoId == 1">Anual</p>
+        <p *ngIf="cartera.plazoId == 2">Semestral</p>
+        <p *ngIf="cartera.plazoId == 3">Cuatrimestral</p>
+        <p *ngIf="cartera.plazoId == 4">Trimestral</p>
+        <p *ngIf="cartera.plazoId == 5">Bimestral</p>
+        <p *ngIf="cartera.plazoId == 6">Mensual</p>
+        <p *ngIf="cartera.plazoId == 7">Quincenal</p>
+        <p *ngIf="cartera.plazoId == 8">Semanal</p>
+        <p *ngIf="cartera.plazoId == 9">Diario</p>
+        <p *ngIf="cartera.plazoId == 10">Especial</p>
+        <br>
+        <p class="card-text">Valor de Plazo de Tasa</p>
+        <p *ngIf="cartera.plazoId == 1">360</p>
+        <p *ngIf="cartera.plazoId == 2">180</p>
+        <p *ngIf="cartera.plazoId == 3">120</p>
+        <p *ngIf="cartera.plazoId == 4">90</p>
+        <p *ngIf="cartera.plazoId == 5">60</p>
+        <p *ngIf="cartera.plazoId == 6">30</p>
+        <p *ngIf="cartera.plazoId == 7">15</p>
+        <p *ngIf="cartera.plazoId == 8">7</p>
+        <p *ngIf="cartera.plazoId == 9">1</p>
+        <p *ngIf="cartera.plazoId == 10">ESPECIAL</p>
+        <br>
+        <p class="card-text">Tipo de Tasa(TE ó TN)</p>
+        <p *ngIf="cartera.tasaId == 1">Tasa nominal</p>
+        <p *ngIf="cartera.tasaId == 2">Tasa efectiva</p>
+        <br>
+        <p class="card-text">Valor de Tasa</p>
+        <p>{{cartera.taza}}</p>
+        <br>
+        <p class="card-text">Periodo de Capitalización(PC)</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 1">Anual</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 2">Semestral</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 3">Cuatrimestral</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 4">Trimestral</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 5">Bimestral</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 6">Mensual</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 7">Quincenal</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 8">Semanal</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 9">Diario</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 10">Especial</p>
+        <p *ngIf="cartera.tasaId">---</p>
+        <br>
+        <p class="card-text">Valor del Periodo de Capitalización</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 1">360</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 2">180</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 3">120</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 4">90</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 5">60</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 6">30</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 7">15</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 8">7</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 9">1</p>
+        <p *ngIf="cartera.tasaId != 2 && cartera.pcId == 10">ESPECIAL</p>
+        <p *ngIf="cartera.tasaId">---</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="height: 600px;">
+      <div class="card-body">
+        <div class="letras">
+          <span class="card-title" style="color: #1B97B6;font-size: 24px;">Datos </span>
+          <span style="color: black;font-size: 24px;"> <strong>obtenidos</strong> </span>            </div>
+        <br>
+        <br>
+        <p class="card-text">Costos iniciales totales</p>
+        <p class="r" *ngIf="cartera.gastoITotal == null">0</p>
+        <p class="r" *ngIf="cartera.gastoITotal != null">{{cartera.gastoITotal}}</p>
+        <p class="r" *ngIf="cartera.gastoITotal != null">{{cartera.gastoITotal}}</p>
+        <br>
+        <p class="card-text">Costos finales totales</p>
+        <p class="r" *ngIf="cartera.gastoFTotal == null">0</p>
+        <p class="r" *ngIf="cartera.gastoFTotal != null && cartera.monedaId == 1">S/. {{cartera.gastoFTotal}}</p>
+        <p class="r" *ngIf="cartera.gastoFTotal != null && cartera.monedaId == 2">US$ {{cartera.gastoFTotal}}</p>
+        <br>
+        <p class="card-text">Número de recibos agregados</p>
+        <p class="r">{{cartera.numRecibos - 1}}</p>
+        <br>
+        <p class="card-text">Valor Total a recibir</p>
+        <p class="r" *ngIf="cartera.monedaId == 1 && cartera.monedaId == 1">S/. {{cartera.recibidoTotal.toFixed(2)}}</p>
+        <p class="r" *ngIf="cartera.monedaId == 2 && cartera.monedaId == 2">US$ {{cartera.recibidoTotal.toFixed(2)}}</p>
+        <br>
+        <p class="card-text">Tasa de Coste Efectiva Anual</p>
+        <p class="r">{{(cartera.tceaTotal.toFixed(7))}}%</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="btn btn-secondary" href="#" role="button"style="background: #4ECCC6;">Ver costos iniciales</a>
+<a class="btn btn-secondary" href="#" role="button" style="background: #102D4A;">Ver costos finales</a>
+<a class="btn btn-secondary" href="#" role="button"style="background: #BB5B5B;">Recibos</a>

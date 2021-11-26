@@ -48,11 +48,6 @@
               <span *ngIf="userForm.controls['ruc'].hasError('max') && userForm.controls['ruc'].touched">ruc muy larga</span>
             </div>
 
-            <div class="form-group">
-              <input type="number" id="documentoId" class="form-control" formControlName="documentoId" placeholder="documentoId">
-              <span *ngIf="userForm.controls['documentoId'].hasError('required') && userForm.controls['documentoId'].touched">Campo requerido</span>
-            </div>
-
             <div class="form-check d-flex justify-content-center mb-5">
               <p class="form-check-label">¿Ya estás registrado? <a href="/login" class="form-check-label">Inicia Sesión</a></p>
             </div>

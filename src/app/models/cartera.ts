@@ -2,7 +2,7 @@ export class Cartera {
   id: number
   descuento: Date
   plazo: number
-  tasa:number
+  taza:number
   periodoCapitalizacion: number
   gastoITotal: number
   gastoFTotal: number

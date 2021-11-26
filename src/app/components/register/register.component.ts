@@ -28,8 +28,7 @@ export class RegisterComponent implements OnInit {
       nombre: ['', Validators.required],
       ruc: ['', [Validators.required, Validators.min(10000000000), Validators.max(10999999999)]],
       correo: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      documentoId: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     }, {
       //validator: ConfirmedValidator('password', 'confirmPassword')
     })
@@ -41,7 +40,7 @@ export class RegisterComponent implements OnInit {
     this.persona.ruc = this.userForm.value.ruc
     this.persona.correo = this.userForm.value.correo
     this.persona.password = this.userForm.value.password
-    this.persona.documentoId = this.userForm.value.documentoId
+    this.persona.documentoId = 1
     this.AppService.registro(this.persona)
       .subscribe(
         response => {

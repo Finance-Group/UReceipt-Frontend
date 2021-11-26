@@ -35,10 +35,11 @@ export class LoginComponent implements OnInit {
     let r = new IniciarLogin();
     r.username = this.userForm.value.username
     r.password = this.userForm.value.password
-    this.AppService.loginn(r).subscribe((data: any) => {
+    this.AppService.loginn(r).subscribe(
+      (data: any) => {
       this.AppService.setToken(r.username)
       this.router.navigate(["../emision"])
-    });
+    }, error => alert("Verifique sus datos y trate de nuevo"));
   }
 
 }

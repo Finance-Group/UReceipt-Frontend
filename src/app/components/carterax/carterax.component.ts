@@ -29,6 +29,7 @@ export class CarteraxComponent implements OnInit {
     this.AppService.getCarteraById(this.carteraId)
       .subscribe(data => {
         this.cartera = JSON.parse(JSON.stringify(data)).data
+        this.cartera.tceaTotal *= 100
         console.log(this.cartera)
       })
   }

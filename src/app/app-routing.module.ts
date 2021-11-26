@@ -4,6 +4,7 @@ import { RegisterComponent } from "./components/register/register.component";
 import { LoginComponent } from "./components/login/login.component";
 import { HomeComponent } from './components/home/home.component';
 import {CambiarPasswordComponent} from "./components/cambiar-password/cambiar-password.component";
+import { EmisionComponent } from './components/emision/emision.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
     path: 'cambiar-contraseña',
     component: CambiarPasswordComponent
   },
+  {
+    path: 'emision',
+    component: EmisionComponent
+  }
 ];
 
 @NgModule({

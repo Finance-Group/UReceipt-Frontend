@@ -1,4 +1,4 @@
-export interface CrearPersona {
+export class CrearPersona {
   id: number;
   nombre: string
   ruc: number

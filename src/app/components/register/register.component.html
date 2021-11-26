@@ -14,8 +14,8 @@
                 <div class="d-flex flex-row align-items-center mb-4">
                   <i class="fa fa-user fa-lg me-3 fa-fw"></i>
                   <div class="flex-fill mb-0">
-                    <input type="number" id="id" class="form-control" formControlName="id" placeholder="Id">
-                    <span *ngIf="userForm.controls['id'].hasError('required') && userForm.controls['id'].touched">Campo requerido</span>
+                    <input type="number" id="num" class="form-control" formControlName="num" placeholder="num">
+                    <span *ngIf="userForm.controls['num'].hasError('required') && userForm.controls['num'].touched">Campo requerido</span>
                   </div>
                 </div>
 
@@ -51,8 +51,8 @@
                   <div class="flex-fill mb-0">
                     <input type="number" id="ruc" class="form-control" formControlName="ruc" placeholder="Ruc">
                     <span *ngIf="userForm.controls['ruc'].hasError('required') && userForm.controls['ruc'].touched">Campo requerido</span>
-                    <span *ngIf="userForm.controls['ruc'].hasError('minlength') && userForm.controls['ruc'].touched">ruc muy corta</span>
-                    <span *ngIf="userForm.controls['ruc'].hasError('maxlength') && userForm.controls['ruc'].touched">ruc muy larga</span>
+                    <span *ngIf="userForm.controls['ruc'].hasError('min') && userForm.controls['ruc'].touched">ruc muy corta</span>
+                    <span *ngIf="userForm.controls['ruc'].hasError('max') && userForm.controls['ruc'].touched">ruc muy larga</span>
 
                   </div>
                 </div>

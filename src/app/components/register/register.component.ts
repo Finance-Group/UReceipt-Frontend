@@ -14,7 +14,7 @@ import {CrearPersona} from "../../models/crearPersona";
 export class RegisterComponent implements OnInit {
 
   userForm!:FormGroup
-  persona!:CrearPersona;
+  persona = new CrearPersona();
 
   constructor(private  fb: FormBuilder, private AppService: AppService, private router: Router) { }
 
@@ -24,9 +24,9 @@ export class RegisterComponent implements OnInit {
 
   initForm(): void {
     this.userForm = this.fb.group({
-      id: ['', Validators.required],
+      num: ['', Validators.required],
       nombre: ['', Validators.required],
-      ruc: ['', [Validators.required, Validators.minLength(11), Validators.maxLength(11)]],
+      ruc: ['', [Validators.required, Validators.min(10000000000), Validators.max(10999999999)]],
       correo: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       documentoId: ['', Validators.required],
@@ -36,13 +36,13 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    this.persona.id = this.userForm.value.id
+    this.persona.id = this.userForm.value.num
     this.persona.nombre = this.userForm.value.nombre
     this.persona.ruc = this.userForm.value.ruc
     this.persona.correo = this.userForm.value.correo
     this.persona.password = this.userForm.value.password
     this.persona.documentoId = this.userForm.value.documentoId
-    this.AppService.register(this.persona)
+    this.AppService.registro(this.persona)
       .subscribe(
         response => {
           console.log(response)

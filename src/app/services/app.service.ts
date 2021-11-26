@@ -12,7 +12,7 @@ export class AppService {
   
   constructor(private http: HttpClient) { }
 
-  public register(persona: CrearPersona): Observable<{}> {
+  public registro(persona: CrearPersona): Observable<{}> {
     return this.http.post(`${environment.api_url}personas/registro`, persona);
   }
 

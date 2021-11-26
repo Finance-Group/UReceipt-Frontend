@@ -5,6 +5,7 @@ import {Router} from "@angular/router";
 import {GastoInicial} from "../../models/gastoInicial";
 import {GastoFinal} from "../../models/gastoFinal";
 import {Formato} from "../../models/formato";
+import {CrearCarteraGastoInicial} from "../../models/crearCarteraGastoInicial";
 
 @Component({
   selector: 'app-creargastosiniciales',
@@ -46,58 +47,100 @@ export class CreargastosinicialesComponent implements OnInit {
   }
   getFornatos(): void {
     this.appService.getFornatos()
-      .subscribe((response: any) => {
-        this.formatos = response.content;
-        console.log(this.formatos);
-      });
+      .subscribe(
+        data => {
+          this.formatos = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
   }
   getGastosIniciales(): void {
     this.appService.getGastosIniciales()
-      .subscribe((response: any) => {
-        this.gastosiniciales = response.content;
-        console.log(this.gastosiniciales);
-      });
+      .subscribe(
+        data => {
+          this.gastosiniciales = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
   }
   getGastosFinales(): void {
     this.appService.getGastosFinales()
-      .subscribe((response: any) => {
-        this.gastosfinales = response.content;
-        console.log(this.gastosfinales);
-      });
+      .subscribe(
+        data => {
+          this.gastosfinales = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
   }
+
   getFormatoById(id: number): void {
     this.appService.getFormatoById(id)
-      .subscribe(data => {
-        this.formatoactual = JSON.parse(JSON.stringify(data)).data
-        console.log(this.formatoactual)
-      })
+      .subscribe(
+        data => {
+          this.formatoactual = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
   }
   getGastoInicialById(id: number): void {
     this.appService.getGastoInicialById(id)
-      .subscribe(data => {
-        this.gastoinicialactual = JSON.parse(JSON.stringify(data)).data
-        console.log(this.gastoinicialactual)
-      })
+      .subscribe(
+        data => {
+          this.gastoinicialactual = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
   }
   getGastoFinalById(id: number): void {
     this.appService.getGastoInicialById(id)
-      .subscribe(data => {
-        this.gastofinalactual = JSON.parse(JSON.stringify(data)).data
-        console.log(this.gastofinalactual)
-      })
+      .subscribe(
+        data => {
+          this.gastofinalactual = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
   }
+
   getGastosInicialesByCarteraId(id: number): void {
     this.appService.getGastosInicialesByCarteraId(id)
-      .subscribe((response: any) => {
-        this.elements = response.content;
-        console.log(this.elements);
-      });
+      .subscribe(
+        data => {
+          this.elements = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
   }
   getGastosFinalesByCarteraId(id: number): void {
     this.appService.getGastosFinalesByCarteraId(id)
-      .subscribe((response: any) => {
-        this.elements = response.content;
-        console.log(this.elements);
-      });
+      .subscribe(
+        data => {
+          this.elements2 = JSON.parse(JSON.stringify(data)).data
+        },
+        error => {
+          alert("Error")
+          console.log(error)
+        })
+  }
+
+  addCarteraGastoI(carteraid: number, carteraGastoInicial: CrearCarteraGastoInicial): void{
+    this.appService.crearCarteraGastoInicial(carteraid,carteraGastoInicial)
+      .subscribe(
+        response => console.log(response),
+        error => console.log(error)
+      )
   }
 }

@@ -17,6 +17,7 @@ import {HistorialComponent} from './components/historial/historial.component';
 import { RecibosComponent } from './components/recibos/recibos.component';
 import { GastosComponent } from './components/gastos/gastos.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { CarteraxComponent } from './components/carterax/carterax.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FilterComponent } from './components/filter/filter.component';
     HistorialComponent,
     RecibosComponent,
     GastosComponent,
-    FilterComponent
+    FilterComponent,
+    CarteraxComponent
   ],
   imports: [
     BrowserModule,

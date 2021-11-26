@@ -7,6 +7,7 @@ import {CambiarPasswordComponent} from "./components/cambiar-password/cambiar-pa
 import { EmisionComponent } from './components/emision/emision.component';
 import { HistorialComponent } from './components/historial/historial.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { CarteraxComponent } from './components/carterax/carterax.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'filter',
     component: FilterComponent
+  },
+  {
+    path: 'carterax',
+    component: CarteraxComponent
   }
 ];
 

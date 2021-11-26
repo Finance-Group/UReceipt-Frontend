@@ -19,6 +19,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { CarteraxComponent } from './components/carterax/carterax.component';
 import { CarteragastoinicialComponent } from './components/carteragastoinicial/carteragastoinicial.component';
 import { CarteragastofinalComponent } from './components/carteragastofinal/carteragastofinal.component';
+import { CreargastosinicialesComponent } from './components/creargastosiniciales/creargastosiniciales.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CarteragastofinalComponent } from './components/carteragastofinal/carte
     FilterComponent,
     CarteraxComponent,
     CarteragastoinicialComponent,
-    CarteragastofinalComponent
+    CarteragastofinalComponent,
+    CreargastosinicialesComponent
   ],
   imports: [
     BrowserModule,

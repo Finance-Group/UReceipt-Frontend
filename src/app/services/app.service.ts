@@ -6,6 +6,8 @@ import { environment } from "../../environments/environment";
 import { IniciarLogin } from '../models/iniciarLogin';
 import {CambiarPassword} from "../models/cambiarPassword";
 import {CookieService} from "ngx-cookie-service";
+import {CrearCarteraGastoInicial} from "../models/crearCarteraGastoInicial";
+import {CrearCarteraGastoFinal} from "../models/crearCarteraGastoFinal";
 
 @Injectable({
   providedIn: 'root'
@@ -46,12 +48,30 @@ export class AppService {
   getRecibosByCarteraId(carteraid: number): Observable<{}> {
     return this.http.get(`${environment.api_url}carteras/${carteraid}/recibos`)
   }
-  //Gastos Iniciales
+
+  //Cartera-GastoInicial
   getGastosInicialesByCarteraId(carteraid: number): Observable<{}> {
     return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosiniciales`)
   }
-  //Gastos Finales
+
+  getByCarteraIdAndGastoInicialId(carteraid: number, gastoinicialid: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosiniciales/${gastoinicialid}`)
+  }
+
+  crearCarteraGastoInicial(carteraid: number, carteraGastoInicial: CrearCarteraGastoInicial): Observable<{}> {
+    return this.http.post(`${environment.api_url}cartera/${carteraid}/gastosiniciales`, carteraGastoInicial)
+  }
+
+  //Cartera-GastoFinal
   getGastosFinalesByCarteraId(carteraid: number): Observable<{}> {
     return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosfinales`)
+  }
+
+  getByCarteraIdAndGastoFinalId(carteraid: number, gastofinalid: number): Observable<{}> {
+    return this.http.get(`${environment.api_url}cartera/${carteraid}/gastosiniciales/${gastofinalid}`)
+  }
+
+  crearCarteraGastoFinal(carteraid: number, carteraGastoFinal: CrearCarteraGastoFinal): Observable<{}> {
+    return this.http.post(`${environment.api_url}cartera/${carteraid}/gastosfinales`, carteraGastoFinal)
   }
 }

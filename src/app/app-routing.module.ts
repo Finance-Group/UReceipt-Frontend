@@ -5,6 +5,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { HomeComponent } from './components/home/home.component';
 import {CambiarPasswordComponent} from "./components/cambiar-password/cambiar-password.component";
 import { EmisionComponent } from './components/emision/emision.component';
+import { HistorialComponent } from './components/historial/historial.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'emision',
     component: EmisionComponent
+  },
+  {
+    path: 'historial',
+    component: HistorialComponent
   }
 ];
 

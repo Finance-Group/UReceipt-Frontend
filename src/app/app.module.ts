@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EmisionComponent } from './components/emision/emision.component';
+import { HistorialComponent } from './components/historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EmisionComponent } from './components/emision/emision.component';
     HomeComponent,
     CambiarPasswordComponent,
     NavbarComponent,
-    EmisionComponent
+    EmisionComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,
